@@ -122,6 +122,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Snap
 
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.camera.shutter.disable=1
+
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
     cneapiclient \
