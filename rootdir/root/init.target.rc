@@ -79,11 +79,11 @@ on init
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
 
 on post-fs-data
-    mkdir /data/tombstones 0771 system system
-    mkdir /tombstones/modem 0771 system system
-    mkdir /tombstones/lpass 0771 system system
-    mkdir /tombstones/wcnss 0771 system system
-    mkdir /tombstones/dsps 0771 system system
+#    mkdir /data/tombstones 0771 system system
+#    mkdir /tombstones/modem 0771 system system
+#    mkdir /tombstones/lpass 0771 system system
+#    mkdir /tombstones/wcnss 0771 system system
+#    mkdir /tombstones/dsps 0771 system system
     mkdir /data/misc/qvop 0660 system system
     mkdir /data/misc/hbtp 0750 system system
     mkdir /data/misc/seemp 0700 system system
@@ -160,7 +160,7 @@ on boot
 service per_mgr /system/bin/pm-service
     class core
     user system
-    group system
+    group system net_raw
     ioprio rt 4
 
 service per_proxy /system/bin/pm-proxy
