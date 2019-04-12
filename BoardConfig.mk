@@ -138,13 +138,6 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
-# MK Hardware
-BOARD_HARDWARE_CLASS += \
-    hardware/mokee/mkhw \
-    $(DEVICE_PATH)/mkhw
-BOARD_USES_MOKEE_HARDWARE := true
-TARGET_TAP_TO_WAKE_NODE :=  "/proc/touchpanel/double_tap_enable"
-
 # CNE and DPM
 BOARD_USES_QCNE := true
 
@@ -173,7 +166,7 @@ VSYNC_EVENT_PHASE_OFFSET_NS := 0
 SF_VSYNC_EVENT_PHASE_OFFSET_NS := 0
 
 # Encryption
-TARGET_HW_DISK_ENCRYPTION := true
+#TARGET_HW_DISK_ENCRYPTION := true
 
 # GPS
 TARGET_NO_RPC := true

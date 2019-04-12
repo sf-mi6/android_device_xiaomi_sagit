@@ -31,7 +31,7 @@ import init.msm.usb.configfs.rc
 import init.target.rc
 
 on early-init
-    mount debugfs debugfs /sys/kernel/debug
+# Removed during droid-hal-device build :     mount debugfs debugfs /sys/kernel/debug
     chmod 0755 /sys/kernel/debug
 
 on init
@@ -43,9 +43,9 @@ on init
     symlink /sdcard /storage/sdcard0
 
     # Create cgroup mount point for memory
-    mount tmpfs none /sys/fs/cgroup mode=0750,uid=0,gid=1000
+# Removed during droid-hal-device build :     mount tmpfs none /sys/fs/cgroup mode=0750,uid=0,gid=1000
     mkdir /sys/fs/cgroup/memory 0750 root system
-    mount cgroup none /sys/fs/cgroup/memory memory
+# Removed during droid-hal-device build :     mount cgroup none /sys/fs/cgroup/memory memory
     write /sys/fs/cgroup/memory/memory.move_charge_at_immigrate 0
     chown root system /sys/fs/cgroup/memory/tasks
     chmod 0660 /sys/fs/cgroup/memory/tasks
@@ -1208,7 +1208,7 @@ service seemp_healthd /system/vendor/bin/seemp_healthd
 
 on charger
    wait /dev/block/bootdevice/by-name/system
-   mount ext4 /dev/block/bootdevice/by-name/system /system ro barrier=1
+# Removed during droid-hal-device build :    mount ext4 /dev/block/bootdevice/by-name/system /system ro barrier=1
    setprop sys.usb.config adb
 
 #add poweroffhandler

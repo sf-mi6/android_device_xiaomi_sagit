@@ -71,8 +71,8 @@ on fs
     chmod 644 /persist/audio/us_manual_cal
 
 on post-fs
-    start qseecomd
-    exec - root root root -- /system/bin/init.qti.qseecomd.sh
+# Guhl   start qseecomd
+# Guhl   exec - root root root -- /system/bin/init.qti.qseecomd.sh
     write /dev/ipa 1
 
 on init
@@ -218,10 +218,10 @@ service qvop-daemon /system/bin/qvop-daemon
 #on property:sys.boot_completed=1
 #    start qrngp
 #
-service qseecomd /system/bin/qseecomd
-   class core
-   user root
-   group root
+# Guhl service qseecomd /system/bin/qseecomd
+# Guhl    class core
+# Guhl    user root
+# Guhl    group root
 
 service spdaemon /system/bin/spdaemon
    class core
@@ -259,10 +259,10 @@ service tpdbg /system/bin/touch_debug
 #    class core
 #    oneshot
 #
-service time_daemon /system/bin/time_daemon
-   class late_start
-   user root
-   group root
+# Guhl service time_daemon /system/bin/time_daemon
+# Guhl   class late_start
+# Guhl   user root
+# Guhl   group root
 
 service adsprpcd /system/bin/adsprpcd
    class main
